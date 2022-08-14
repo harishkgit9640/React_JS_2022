@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
+// import { add } from './*math.js';
+// console.log(add(16, 26));
+
 
 export default function TextForm(props) {
 
+    const handleClear = () => {
+        let newText = " ";
+        settext(newText);
+    }
     const handleUpCase = () => {
         let newText = text.toUpperCase();
         settext(newText);
@@ -26,11 +33,13 @@ export default function TextForm(props) {
                     </div>
                     <button className="btn btn-primary" onClick={handleUpCase}>ToUpperCase</button>
                     <button className="btn btn-success ms-2" onClick={handleLoCase}>ToLowerCase</button>
+                    <button className="btn btn-danger ms-2" onClick={handleClear}>ClearText</button>
+                    {/* <button className="btn btn-secondary ms-2" onClick={handleCopyText}>CopyText</button> */}
                 </div>
             </div>
 
             <div className="container my-3">
-                <p> {text.split(" ").length} Words and {text.length} Character </p>
+                <p> {text.split(" ").length} Words, {text.length} Character </p>
                 <p> {0.008 * text.split(" ").length} Minutes to Read </p>
                 <h2>Preview</h2>
                 <p className='text-justify'> {text} </p>

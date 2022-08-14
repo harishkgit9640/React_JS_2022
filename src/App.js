@@ -1,11 +1,14 @@
 import './App.css';
 import Navbar from './Components/Navbar';
+import TextForm from './Components/TextForm';
 
 function App() {
   return (
     <>
       <Navbar title="HK Solution" about="About Us" />
-      {/* <Navbar /> */}
+      <div className="container my-3">
+        <TextForm heading="Enter the Text here" />
+      </div>
     </>
   );
 }

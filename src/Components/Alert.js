@@ -1,9 +1,9 @@
-import React from 'react'
 
-export default function Alert() {
+export default function Alert(props) {
+
     return (
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+            <strong>{props.alert.type}</strong> : {props.alert.msg}
         </div>
     )
 }

@@ -9,6 +9,12 @@ export default function TextForm(props) {
         props.showAlert("Selected Text Copied", "success")
     }
 
+    // const handleTextCapp = () => {
+    //     let newText = text.length.charAt(0).toUpperCase() + text.length.slice(1);
+    //     settext(newText);
+    //     props.showAlert("Text Capitalize", "success")
+    // }
+
     const handleExtraSpace = () => {
         let newText = text.split(/[ ]+/);
         settext(newText.join(" "));
@@ -25,13 +31,13 @@ export default function TextForm(props) {
     const handleUpCase = () => {
         let newText = text.toUpperCase();
         settext(newText);
-        props.showAlert("Text has Changed into UpperCase", "success")
+        props.showAlert("Text Converted into UpperCase", "success")
 
     }
     const handleLoCase = () => {
         let newText = text.toLowerCase();
         settext(newText);
-        props.showAlert("Text has Changed into LowerCase", "success")
+        props.showAlert("Text Converted into LowerCase", "success")
 
     }
 
@@ -53,6 +59,7 @@ export default function TextForm(props) {
                     <button className="btn btn-danger ms-2" onClick={handleClear}>ClearText</button>
                     <button className="btn btn-secondary ms-2" onClick={handleCopyText}>CopyText</button>
                     <button className="btn btn-warning ms-2" onClick={handleExtraSpace}>ClearExtraSpace</button>
+                    {/* <button className="btn btn-primary ms-2" onClick={handleTextCapp}>Text Capitalize</button> */}
                 </div>
             </div>
 
